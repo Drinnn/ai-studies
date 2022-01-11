@@ -1,4 +1,4 @@
-from test_graph import Graph
+from arad_to_bucharest_graph import Graph
 from a_star import AStar
 
 graph = Graph()

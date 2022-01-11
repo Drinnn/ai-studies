@@ -1,4 +1,4 @@
-from test_graph import Graph
+from arad_to_bucharest_graph import Graph
 from greedy_search import GreedySearch
 
 graph = Graph()
