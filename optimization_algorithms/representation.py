@@ -12,4 +12,27 @@ for line in open('flights.txt'):
     flights[(flight_origin, flight_destination)].append(
         (flight_exit_time, flight_arriving_time, int(flight_price)))
 
-print(flights[('FCO', 'LIS')])
+
+def print_flights(schedule):
+    flight_id = -1
+    total_price = 0
+    for i in range(len(schedule) // 2):
+        origin_city = people[i][0]
+        origin_airport_abbreviation = people[i][1]
+        flight_id += 1
+        departure_flight = flights[(
+            origin_airport_abbreviation, destination)][schedule[flight_id]]
+        total_price += departure_flight[2]
+        flight_id += 1
+        return_flight = flights[(
+            destination, origin_airport_abbreviation)][schedule[flight_id]]
+        total_price += return_flight[2]
+        print('%10s%10s %5s-%5s %3s %5s-%5s %3s' %
+              (origin_city, origin_airport_abbreviation, departure_flight[0], departure_flight[1], departure_flight[2],
+               return_flight[0], return_flight[1], return_flight[2]))
+
+    print('Total price: {}'.format(total_price))
+
+
+schedule = [1, 2, 3, 2, 7, 3, 6, 3, 2, 4, 5, 3]
+print_flights(schedule)
