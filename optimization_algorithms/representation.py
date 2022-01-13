@@ -1,5 +1,3 @@
-import mlrose
-
 people = [('Lisboa', 'LIS'), ('Madrid', 'MAD'),
           ('Paris', 'CDG'), ('Dublin', 'DUB'),
           ('Bruxelas', 'BRU'), ('Londres', 'LHR')]  # City name and Airport abbreviation
@@ -7,7 +5,7 @@ people = [('Lisboa', 'LIS'), ('Madrid', 'MAD'),
 destination = 'FCO'  # Rome Airport
 
 flights = {}
-for line in open('flights.txt'):
+for line in open('/Users/drinn/Projetos/ai/optimization_algorithms/flights.txt'):
     flight_origin, flight_destination, flight_exit_time, flight_arriving_time, flight_price = line.split(
         ',')
     flights.setdefault((flight_origin, flight_destination), [])
@@ -55,7 +53,3 @@ def fitness_function(schedule):
 
 schedule = [1, 2, 3, 2, 7, 3, 6, 3, 2, 4, 5, 3]
 print_flights(schedule)
-
-fitness = mlrose.CustomFitness(fitness_function)
-problem_representation = mlrose.DiscreteOpt(
-    length=12, fitness_fn=fitness, maximize=False, max_val=10)
