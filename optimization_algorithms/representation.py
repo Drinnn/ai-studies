@@ -52,4 +52,4 @@ def fitness_function(schedule):
 
 
 schedule = [1, 2, 3, 2, 7, 3, 6, 3, 2, 4, 5, 3]
-print_flights(schedule)
+# print_flights(schedule)
