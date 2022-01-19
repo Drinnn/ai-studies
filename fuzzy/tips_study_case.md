@@ -18,4 +18,4 @@ Gorjeta: quanta gorjeta você daria, entre 0% e 20%?
 
 - Se a qualidade da comida for ruim ou o serviço for ruim então a gorjeta será baixa
 - Se o serviço for médio então a gorjeta será média
-- se o serviço for bom e a qualidade da comida for boa então a gorjeta será alta
+- se o serviço for bom e a qualidade da comida for saborosa então a gorjeta será alta
